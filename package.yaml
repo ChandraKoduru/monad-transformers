@@ -1,0 +1,45 @@
+name:                monad-transformers
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/chandrakoduru/monad-transformers#readme
+license:             BSD3
+author:              Chandra Koduru
+maintainer:          chandrakoduru@outlook.com
+copyright:           ThisYear
+category:            Learning Haskell
+ghc-options: -Wall -Werror -Wno-unused-matches -Wincomplete-uni-patterns -Wincomplete-record-updates -Wmissing-import-lists
+extra-source-files:
+- README.md
+
+dependencies:
+  - base
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Lib
+
+executables:
+  monad-transformers:
+    source-dirs:  app
+    main:         Main.hs
+    dependencies: 
+      - monad-transformers
+      - optparse-applicative
+      - gitrev
+
+tests:
+    monad-transformers-test:
+      source-dirs: test
+      main: Driver.hs
+      dependencies:
+        - monad-transformers
+        - hspec
+        - QuickCheck
+        - tasty
+        - tasty-hspec
+        - tasty-hunit
+        - tasty-quickcheck
+        - tasty-discover
+    
