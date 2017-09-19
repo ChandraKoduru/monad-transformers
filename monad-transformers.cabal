@@ -8,7 +8,7 @@ category:       Learning Haskell
 homepage:       https://github.com/chandrakoduru/monad-transformers#readme
 author:         Chandra Koduru
 maintainer:     chandrakoduru@outlook.com
-copyright:      ThisYear
+copyright:      2017
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,8 +23,11 @@ library
   ghc-options: -Wall -Werror -Wno-unused-matches -Wincomplete-uni-patterns -Wincomplete-record-updates -Wmissing-import-lists
   build-depends:
       base
+    , containers == 0.5.7.1
   exposed-modules:
       Lib
+      Transformers
+      SampleExpressions
   other-modules:
       Paths_monad_transformers
   default-language: Haskell2010
@@ -36,8 +39,9 @@ executable monad-transformers
   ghc-options: -Wall -Werror -Wno-unused-matches -Wincomplete-uni-patterns -Wincomplete-record-updates -Wmissing-import-lists
   build-depends:
       base
+    , containers == 0.5.7.1
     , monad-transformers
-    , optparse-applicative
+    , optparse-applicative == 0.14.0.0
     , gitrev
   other-modules:
       Args
@@ -51,6 +55,7 @@ test-suite monad-transformers-test
   ghc-options: -Wall -Werror -Wno-unused-matches -Wincomplete-uni-patterns -Wincomplete-record-updates -Wmissing-import-lists
   build-depends:
       base
+    , containers == 0.5.7.1
     , monad-transformers
     , hspec
     , QuickCheck
@@ -60,5 +65,6 @@ test-suite monad-transformers-test
     , tasty-quickcheck
     , tasty-discover
   other-modules:
+      Eval0Test
       Test
   default-language: Haskell2010

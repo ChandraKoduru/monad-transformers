@@ -6,7 +6,7 @@ homepage:            https://github.com/chandrakoduru/monad-transformers#readme
 license:             BSD3
 author:              Chandra Koduru
 maintainer:          chandrakoduru@outlook.com
-copyright:           ThisYear
+copyright:           '2017'
 category:            Learning Haskell
 ghc-options: -Wall -Werror -Wno-unused-matches -Wincomplete-uni-patterns -Wincomplete-record-updates -Wmissing-import-lists
 extra-source-files:
@@ -14,11 +14,14 @@ extra-source-files:
 
 dependencies:
   - base
+  - containers == 0.5.7.1
 
 library:
   source-dirs: src
   exposed-modules:
     - Lib
+    - Transformers
+    - SampleExpressions
 
 executables:
   monad-transformers:
@@ -26,7 +29,7 @@ executables:
     main:         Main.hs
     dependencies: 
       - monad-transformers
-      - optparse-applicative
+      - optparse-applicative == 0.14.0.0
       - gitrev
 
 tests:
@@ -42,4 +45,3 @@ tests:
         - tasty-hunit
         - tasty-quickcheck
         - tasty-discover
-    
