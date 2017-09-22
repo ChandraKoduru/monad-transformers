@@ -6,7 +6,8 @@ import Test.Tasty.Hspec      (Spec, describe, it, shouldBe)
 -- import Test.Tasty            (TestTree)
 -- import Test.Tasty.QuickCheck (testProperty)
 
-import Transformers (eval0, Value(IntVal))
+import Evaluator0 (eval0)
+import Language (Value(IntVal))
 import SampleExpressions (exp1)
 import qualified Data.Map as Map
 

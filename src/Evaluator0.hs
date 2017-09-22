@@ -1,30 +1,12 @@
 {-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
 {-# OPTIONS_GHC -Wno-incomplete-patterns #-}
+{-# OPTIONS_GHC -Wno-missing-import-lists #-}
 
-module Transformers where
+module Evaluator0 where
 
--- import Control.Monad.Identity
--- import Control.Monad.Error
--- import Control.Monad.Reader
--- import Control.Monad.State
--- import Control.Monad.Writer
 import Data.Maybe (fromJust)
 import qualified Data.Map as Map
-
-type Name = String
-
-data Exp = Lit Integer
-         | Var Name
-         | Plus Exp Exp
-         | Abs Name Exp
-         | App Exp Exp
-         deriving (Show, Eq)
-
-data Value = IntVal Integer 
-           | FunVal Env Name Exp
-           deriving (Show, Eq)
-
-type Env = Map.Map Name Value
+import Language (Exp(..), Value(..), Env)
 
 -- | Basic interpreter implementation
 --

@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-missing-import-lists #-}
 module SampleExpressions where
 
-import Transformers (Exp(..))
+import Language (Exp(..))
 
 --exp1 --> 12 + ((\x -> x)(4+2))
 exp1 :: Exp

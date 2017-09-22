@@ -20,8 +20,9 @@ library:
   source-dirs: src
   exposed-modules:
     - Lib
-    - Transformers
+    - Evaluator0
     - SampleExpressions
+    - Language
 
 executables:
   monad-transformers:
